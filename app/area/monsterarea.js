@@ -6,7 +6,7 @@
 
     controller: function() {
       const vm = this
-      console.log('area working');
+      console.log(vm);
 
     },
     templateUrl: 'app/area/monsterarea.html'

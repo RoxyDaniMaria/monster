@@ -3,11 +3,17 @@
   angular
   .module('app')
   .component('monstermenu', {
-
+    bindings: {
+      monsterdetails :  '<'
+    },
     controller: function() {
+      const vm = this
+      console.log(vm)
 
-      console.log('menu working')
-    
+      vm.testtest = function(data){
+        console.log(data[1])
+      }
+
   },
     templateUrl: 'app/menu/monstermenu.html'
   })
