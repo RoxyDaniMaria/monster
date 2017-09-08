@@ -1,14 +1,20 @@
 (function() {
   'use strict';
   angular
-  .module('app')
-  .component('monsterarea', {
+    .module('app')
+    .component('monsterarea', {
+      bindings: {
+        monsters: '<'
+      },
+      controller: function() {
+        const vm = this
+        vm.showme = function(monsters){
 
-    controller: function() {
-      const vm = this
-      console.log(vm);
-
-    },
-    templateUrl: 'app/area/monsterarea.html'
-  })
+        if (monsters !== undefined) {
+            console.log(monsters);
+          }
+        }
+      },
+      templateUrl: 'app/area/monsterarea.html'
+    })
 }());
