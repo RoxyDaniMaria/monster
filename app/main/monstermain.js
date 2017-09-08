@@ -12,10 +12,10 @@
         $http.get(url).then(function(monsters) {
           //console.log(monsters)
           vm.mainmonsters = monsters.data.monsters // monsters info
-          console.log(vm.mainmonsters)
-          // vm.formstatuses = {
-          //   view: true
-          // }
+          //console.log(vm.mainmonsters)
+          vm.hidemonster = {
+            appear: true
+          }
           // vm.formsubmit = {
           //   subject : "subject",
           //   body : "body"
