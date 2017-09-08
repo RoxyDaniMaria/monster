@@ -4,16 +4,33 @@
   .module('app')
   .component('monstermenu', {
     bindings: {
-      monsterdetails :  '<'
+      monsterdetails :  '<',
+      hideme : '<'
     },
     controller: function() {
       const vm = this
-      console.log(vm)
+      //console.log(vm)
 
-      vm.testtest = function(data){
-        console.log(data[1])
+      vm.findname = function(monster){
+        console.log(monster)
+        if(monster !== undefined){
+          for(var i = 0; i < monster.length; i++){
+            // if(monster[i].scary !== true){
+              return monster[i].name
+            }
+          // }
+        }
       }
 
+      vm.description = function(monster){
+        if(monster !== undefined){
+          for(var i = 0; i < monster.length; i++){
+            if(monster[i].scary !== true){
+              return monster[i].description
+            }
+          }
+        }
+      }
   },
     templateUrl: 'app/menu/monstermenu.html'
   })
