@@ -1,0 +1,12 @@
+main {
+  height: 90vh;
+  background-image: url('/images/bedroom.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-top: -2.1em;
+}
+
+header {
+  margin-bottom: 0;
+}
